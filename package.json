@@ -1,7 +1,7 @@
 {
   "name": "ztrain_cypress_automation",
   "version": "1.0.0",
-  "description": "ZTrain crypress automation project",
+  "description": "ZTrain cypress automation project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,20 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^9.6.0"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "src/tests/step_definitions",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "target/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.19.0"
   }
 }
